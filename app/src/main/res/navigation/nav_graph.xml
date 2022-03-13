@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/carsFragment">
+
+    <fragment
+        android:id="@+id/carsFragment"
+        android:name="com.moon.map_application.ui.poiList.POIFragment"
+        android:label="Cariad App"
+        tools:layout="@layout/fragment_poi">
+        <action
+            android:id="@+id/action_carsFragment_to_carDetailFragment"
+            app:destination="@id/carDetailFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/carDetailFragment"
+        android:name="com.moon.map_application.ui.poiDetails.POIDetailsFragment"
+        android:label="POI Detail"
+        tools:layout="@layout/fragment_poi_details" />
+</navigation>
