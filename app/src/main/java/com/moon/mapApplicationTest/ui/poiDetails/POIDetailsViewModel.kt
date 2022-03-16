@@ -20,15 +20,15 @@ class POIDetailsViewModel @Inject constructor(
 
     fun showPOIInfo(poi: POI?) {
         poi?.AddressInfo?.Title?.let {
-            poiTitle.value= it
+            poiTitle.value = it
         }
 
         poi?.AddressInfo?.AddressLine1?.let {
-            chargingStationAddress.value= it
+            chargingStationAddress.value = it
         }
 
         poi?.NumberOfPoints?.let {
-            numberOfChargingPoints.value= it.toString()
+            numberOfChargingPoints.value = it.toString()
         }
     }
 }

@@ -3,20 +3,20 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/carsFragment">
+    app:startDestination="@id/poiFragment">
 
     <fragment
-        android:id="@+id/carsFragment"
+        android:id="@+id/poiFragment"
         android:name="com.moon.mapApplicationTest.ui.poiList.POIFragment"
-        android:label="Cariad App"
+        android:label="@string/app_name"
         tools:layout="@layout/fragment_poi">
         <action
-            android:id="@+id/action_carsFragment_to_carDetailFragment"
-            app:destination="@id/carDetailFragment" />
+            android:id="@+id/action_poiFragment_to_poiDetailFragment"
+            app:destination="@id/poiDetailFragment" />
 
     </fragment>
     <fragment
-        android:id="@+id/carDetailFragment"
+        android:id="@+id/poiDetailFragment"
         android:name="com.moon.mapApplicationTest.ui.poiDetails.POIDetailsFragment"
         android:label="POI Detail"
         tools:layout="@layout/fragment_poi_details" />

@@ -24,7 +24,7 @@ class POIViewModel @Inject constructor(
     val response: LiveData<Resource<POINode>> = _response
 
 
-    var carList: ArrayList<POI> = arrayListOf()
+    var poiList: ArrayList<POI> = arrayListOf()
 
     fun fetchCarResponse() = viewModelScope.launch {
         repository.getPOI().collect { values ->
@@ -36,9 +36,8 @@ class POIViewModel @Inject constructor(
         when (response.status.name) {
             AppEnum.API_CALL_STATUS.SUCCESS.name -> {
                 response.data?.let {
-                    carList.addAll(it)
+                    poiList.addAll(it)
                 }
-
                 navigator.addPOIMarker()
             }
             AppEnum.API_CALL_STATUS.ERROR.name -> {

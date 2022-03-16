@@ -29,7 +29,7 @@ class POIDetailsFragment : Fragment(), IPOIDetailsNavigator {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        arguments?.getParcelable<POI>(POI_ITEM)?.let { poi->
+        arguments?.getParcelable<POI>(POI_ITEM)?.let { poi ->
             viewModel.showPOIInfo(poi)
         }
     }

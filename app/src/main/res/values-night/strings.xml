@@ -17,4 +17,5 @@
     <string name="title">Title:</string>
     <string name="number_of_charging_points">Number of \nCharging Points:</string>
     <string name="charging_station_address">Charging \nStation Address:</string>
+    <string name="internet_connect_message">Please Active Internet Connection</string>
 </resources>

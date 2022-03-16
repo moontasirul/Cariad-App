@@ -1,25 +1,14 @@
 package com.moon.mapApplicationTest.ui.poiList
 
-import android.Manifest
-import android.annotation.TargetApi
-import android.app.AlertDialog
-import android.content.Context
-import android.content.pm.PackageManager
-import android.location.Location
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.result.contract.ActivityResultContracts
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.google.android.gms.location.FusedLocationProviderClient
-import com.google.android.gms.location.LocationServices
 import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
@@ -36,7 +25,6 @@ import com.moon.mapApplicationTest.utils.Utils
 import com.moon.mapApplicationTest.utils.dialogUtils.CustomDialogCallback
 import com.moon.mapApplicationTest.utils.dialogUtils.CustomDialogFragment
 import dagger.hilt.android.AndroidEntryPoint
-import java.util.*
 
 @AndroidEntryPoint
 class POIFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListener,
@@ -75,7 +63,7 @@ class POIFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
         } else {
             showDialog(
                 requireContext().getString(R.string.msg_failed),
-                "Please Active Internet Connection",
+                requireContext().resources.getString(R.string.internet_connect_message),
                 true
             )
         }
@@ -102,7 +90,7 @@ class POIFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
     override fun addPOIMarker() {
         if (Utils.isLocationEnabled(requireContext())) {
             mMap.let {
-                for (poi in viewModel.carList) {
+                for (poi in viewModel.poiList) {
                     poi.AddressInfo?.Latitude?.let {
                         poi.AddressInfo?.Longitude?.let { it1 ->
                             LatLng(
@@ -165,7 +153,7 @@ class POIFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
 
     private fun onClickedCar(poi: POI) {
         findNavController().navigate(
-            R.id.action_carsFragment_to_carDetailFragment,
+            R.id.action_poiFragment_to_poiDetailFragment,
             bundleOf(POI_ITEM to poi)
         )
     }
