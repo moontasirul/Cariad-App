@@ -81,9 +81,9 @@ class POIFragment : Fragment(), OnMapReadyCallback, GoogleMap.OnMarkerClickListe
 
     private fun setupObservers() {
         viewModel.isLoading.set(true)
-        viewModel.fetchCarResponse()
+        viewModel.fetchPOIResponse()
         viewModel.response.observe(requireActivity()) { response ->
-            viewModel.getCarResponse(response)
+            viewModel.getPOIResponse(response)
         }
     }
 

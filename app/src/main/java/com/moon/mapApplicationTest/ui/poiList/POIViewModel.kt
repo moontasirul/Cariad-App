@@ -26,13 +26,13 @@ class POIViewModel @Inject constructor(
 
     var poiList: ArrayList<POI> = arrayListOf()
 
-    fun fetchCarResponse() = viewModelScope.launch {
+    fun fetchPOIResponse() = viewModelScope.launch {
         repository.getPOI().collect { values ->
             _response.value = values
         }
     }
 
-    fun getCarResponse(response: Resource<POINode>) {
+    fun getPOIResponse(response: Resource<POINode>) {
         when (response.status.name) {
             AppEnum.API_CALL_STATUS.SUCCESS.name -> {
                 response.data?.let {
