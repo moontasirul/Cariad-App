@@ -9,7 +9,7 @@
 
         <variable
             name="dialogViewModel"
-            type="com.moon.map_application.utils.dialogUtils.CustomDialogViewModel" />
+            type="com.moon.mapApplicationTest.utils.dialogUtils.CustomDialogViewModel" />
     </data>
 
 

@@ -15,4 +15,7 @@
     <string name="location_permission">Allow Location Permission</string>
     <string name="location_permission_message">Update location permission from setting</string>
     <string name="btn_text_no">No</string>
+    <string name="title">Title:</string>
+    <string name="number_of_charging_points">Number of \nCharging Points:</string>
+    <string name="charging_station_address">Charging \nStation Address:</string>
 </resources>

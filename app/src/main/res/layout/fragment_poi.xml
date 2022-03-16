@@ -9,7 +9,7 @@
 
         <variable
             name="poiViewModel"
-            type="com.moon.map_application.ui.poiList.POIViewModel" />
+            type="com.moon.mapApplicationTest.ui.poiList.POIViewModel" />
     </data>
 
 

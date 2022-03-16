@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.moon.map_application">
+    package="com.moon.mapApplicationTest">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
@@ -11,7 +11,7 @@
     <uses-permission android:name="android.permission.ACCESS_BACKGROUND_LOCATION" />
 
     <application
-        android:name=".CariadTestApp"
+        android:name="com.moon.mapApplicationTest.CariadTestApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -21,10 +21,10 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyASvBXQO3uVWSI5_fSfr9KcxieEnJOva7U" />
+            android:value="AIzaSyDbggv3Zzyqf8A2psFlvovJ-DQzZoyydCw" />
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.moon.mapApplicationTest.ui.MainActivity"
             android:exported="true"
             android:label="@string/app_name">
             <intent-filter>

@@ -11,7 +11,7 @@ android {
     compileSdk 32
 
     defaultConfig {
-        applicationId "com.moon.map_application"
+        applicationId "com.moon.mapApplicationTest"
         minSdk 21
         targetSdk 32
         versionCode 1
